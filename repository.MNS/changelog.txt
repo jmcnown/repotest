@@ -1,2 +1,0 @@
-[B]Version 2.0[/B]
-- Initial version

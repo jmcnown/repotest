@@ -1,68 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.audio.radionl" name="Radio NL" version="1.0.6" provider-name="Beerkeeper">
+<addon id="plugin.video.prime_instant" name="Amazon Prime Instant Video" version="1.1.7" provider-name="XLordKX">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.urlresolver"  version="0.0.1"/>
-        <import addon="script.module.metahandler"  version="1.0.2"/>
+        <import addon="script.module.mechanize" version="0.2.6"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>audio</provides>
+        <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en">Alle radiozenders van Nederland</summary>
-        <description lang="en">Tot dusver bekend alle radiozenders die in Nederland worden uitgezonden</description>
-        <disclaimer lang="en"></disclaimer>
-        <language></language>
         <platform>all</platform>
-        <license></license>
-        <forum></forum>
-        <website>http://www.google.nl</website>
-        <email></email>
-        <source></source>
+        <summary lang="en">Amazon Prime Instant Video Add-on (DE/UK)</summary>
+        <language></language>
+        <description lang="en">Amazon Prime Instant Video Add-on (DE/UK)</description>
+        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <source>https://github.com/XLordKX/kodi</source>
+        <forum>http://www.kodinerds.net</forum>
+        <website>http://www.amazon.com</website>
     </extension>
 </addon>
 
-<addon id="script.navi-x"
-       name="Navi-X"
-       version="4.0"
-       provider-name="Team Navi-X and TVADDONS.ag">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.urlresolver"  />
-    <import addon="script.module.t0mm0.common"  />
-    <import addon="script.module.addon.common" optional="false" />
-    <import addon="repository.xbmchub" optional="true" />
-    <import addon="plugin.video.youtube" optional="false" />
-  </requires>
-  <extension point="xbmc.python.script" library="default.py" >
-    <provides>executable video</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="startup">
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <minversion>28764</minversion>
-    <summary>Media Browser Addon for Kodi</summary>
-    <description>Navi-X is the oldest and most trusted add-on for Kodi, used by millions of people worldwide. You'll find everything from live television to your favourite movies and television shows, easily accessible.</description>
-    <disclaimer>http://www.navixtreme.com/terms/</disclaimer>
-    <forum>http://forums.tvaddons.ag/forums/38-NAVI-X-MEDIA-BROWSER-FOR-KODI</forum>
-    <website>http://www.navixtreme.com/</website>
-    <source></source>
-    <email></email>
-  </extension>
+<addon id="repository.xlordkx" name="XLordKX Repo" version="1.0.0" provider-name="XLordKX">
+	<extension point="xbmc.addon.repository" name="XLordKX Repo">
+		<info compressed="false">https://raw.githubusercontent.com/XLordKX/kodi/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/XLordKX/kodi/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/XLordKX/kodi/master/zip/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Some fixed scripts and addons</summary>
+		<description>Some fixed scripts and addons</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
 </addon>
 
-<addon id="repository.MNS" name="MNS Repository" version="2.0" provider-name="McNown Networks">
-<extension point="xbmc.addon.repository" name="MNS Addon Repository">
-<info compressed="false">https://raw.github.com/jmcnown/repotest/addons.xml</info>
-<checksum>https://raw.github.com/jmcnown/repotest/addons.xml.md5</checksum>
-<datadir zip="true">https://raw.github.com/jmcnown/repotest/</datadir>
-</extension>
-<extension point="xbmc.addon.metadata">
-<summary>MNS Repository</summary>
-<description>McNown Netowrks Repository http://McNown.biz</description>
-<platform>all</platform>
-</extension>
+<addon id="service.xbmc.primeproxy" name="Prime Proxy" version="0.1.1~alpha2" provider-name="XLordKX">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.service" library="VariableBitrateServer.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en"></summary>
+        <language></language>
+        <description lang="en"></description>
+        <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+        <license>Not specified yet</license>
+        <source>https://github.com/XLordKX/kodi</source>
+        <forum>h</forum>
+        <website>http://www.amazon.com</website>
+    </extension>
 </addon>
 </addons>
